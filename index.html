@@ -337,117 +337,399 @@
         </div>
       </section>
 
-      <!-- Cardápio -->
-  <section id="cardapio" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5 display-5" style="font-family: 'Comic Sans MS', cursive; color: #ff5e99;">Cardápio do Buffet</h2>
-      <div class="row text-center">
-        
-        <!-- Entrada -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-buffet-clipart-cartoon-cartoon-food-buffet-table-on-white-vector-png-image_6798437.png" 
-              width="60" height="60" class="mb-3 rounded-circle" alt="Entrada">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Entrada</h4>
-          <p class="text-secondary fw-bold">Escolher 3 opções</p>
-          <ul class="list-unstyled">
-            <li>Barquinha de maionese</li>
-            <li>Batata frita</li>
-            <li>Mini hambúrguer</li>
-            <li>Mini cachorro quente</li>
-            <li>Mini pizza</li>
-            <li>Mini lanche de pernil</li>
-            <li>Mini pão sírio (patê de frango)</li>
-          </ul>
-        </div>
+ <!-- Cardápio Compacto com Modal -->
+<section id="cardapio" class="py-5" style="background: linear-gradient(135deg, #fff4f8 0%, #f0f8ff 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary mb-3 py-2 px-3">
+        <i class="bi bi-egg-fried me-2"></i>NOSSO BUFFET
+      </span>
+      <h2 class="fw-bold mb-3" style="color: #ff5e99;">Cardápio Completo</h2>
+      <p class="text-muted">Delícias preparadas com carinho para tornar sua festa especial</p>
+    </div>
 
-        <!-- Salgados Fritos -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://augustaalimentos.com.br/wp-content/uploads/2019/04/prato-salgados.png" 
-              width="60" height="60" class="mb-3 rounded-circle" alt="Salgados fritos">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Salgados Fritos</h4>
-          <p class="text-secondary fw-bold">Escolher 4 opções</p>
-          <ul class="list-unstyled">
-            <li>Coxinha</li>
-            <li>Kibe</li>
-            <li>Bolinha de queijo</li>
-            <li>Enroladinho de salsicha</li>
-            <li>Enroladinho de presunto e queijo</li>
-            <li>Risolis de milho com catupiry</li>
-          </ul>
+    <!-- Preview do Cardápio (3 categorias principais) -->
+    <div class="row g-4 mb-5">
+      <!-- Entrada -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card card-menu h-100 border-0 shadow-hover">
+          <div class="card-header bg-transparent border-0 text-center pt-4">
+            <div class="menu-icon mx-auto">
+              <img src="https://www.banca43.com.br/cdn/imagens/produtos/det/whatsapp_image_2025-05-23_at_15-43-32-removebg-preview-2.png" alt="Ícone de entrada com aperitivos coloridos" class="img-fluid rounded-circle">
+            </div>
+            <h4 class="fw-bold mt-3 mb-2" style="color: #ff5e99;">Entrada</h4>
+            <span class="badge bg-primary bg-opacity-10 text-primary">3 opções</span>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Barquinha de maionese
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Batata frita
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Mini hambúrguer
+              </li>
+              <li class="text-center mt-3">
+                <small class="text-muted">+4 outras opções</small>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <!-- Salgados Assados -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://png.pngtree.com/png-vector/20230307/ourmid/pngtree-three-delicious-nastar-cheese-cookies-vector-illustration-png-image_6636194.png" 
-              width="60" height="60" class="mb-3 rounded-circle" alt="Salgados assados">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Salgados Assados</h4>
-          <p class="text-secondary fw-bold">Escolher 2 opções</p>
-          <ul class="list-unstyled">
-            <li>Esfirra de carne</li>
-            <li>Esfirra de frango</li>
-            <li>Esfirra de calabresa com catupiry</li>
-            <li>Empada de frango</li>
-            <li>Tortinha de tempero</li>
-          </ul>
+      <!-- Salgados Fritos -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card card-menu h-100 border-0 shadow-hover">
+          <div class="card-header bg-transparent border-0 text-center pt-4">
+            <div class="menu-icon mx-auto">
+              <img src="https://fritosnahora.com.br/wp-content/uploads/2022/07/1472-784x523-1.png" alt="Ícone de salgados fritos" class="img-fluid rounded-circle">
+            </div>
+            <h4 class="fw-bold mt-3 mb-2" style="color: #ff5e99;">Salgados Fritos</h4>
+            <span class="badge bg-primary bg-opacity-10 text-primary">4 opções</span>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Coxinha
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Kibe
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Bolinha de queijo
+              </li>
+              <li class="text-center mt-3">
+                <small class="text-muted">+3 outras opções</small>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- Massas -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://images.vexels.com/media/users/3/264613/isolated/preview/08bcb373a3ed126ce0c739286f26c883-comida-de-ilustracao-de-massas.png" width="60" class="mb-3">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Massas</h4>
-          <p class="text-secondary fw-bold">Escolher 1 opção</p>
-          <ul class="list-unstyled">
-            <li>Macarrão parafuso com molho bolonhesa</li>
-            <li>Polenta com carne moída</li>
-          </ul>
-        </div>
+      </div>
 
-        <!-- Bebidas -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://media.istockphoto.com/id/1511319542/pt/vetorial/cola-soda-drink-picture-sticker-vector-drawing-of-a-soda-cup-and-bottle-in-flat-cartoon.jpg?s=612x612&w=0&k=20&c=6PmMFdhzf6quPLG7e0LfNXtaxxKDv_EHQI3rEnX-Zvk=" 
-              width="60" height="60" class="mb-3 rounded-circle" alt="Bebida">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Bebidas</h4>
-          <ul class="list-unstyled">
-            <li>Coca-Cola</li>
-            <li>Guaraná Cruzeiro</li>
-            <li>Suco de laranja</li>
-            <li>Água</li>
-          </ul>
+      <!-- Bolo -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card card-menu h-100 border-0 shadow-hover">
+          <div class="card-header bg-transparent border-0 text-center pt-4">
+            <div class="menu-icon mx-auto">
+              <img src="https://png.pngtree.com/png-clipart/20240218/original/pngtree-cake-and-coffee-valentine-menu-png-image_14345983.png" alt="Ícone de bolo decorado" class="img-fluid rounded-circle">
+            </div>
+            <h4 class="fw-bold mt-3 mb-2" style="color: #ff5e99;">Bolo</h4>
+            <span class="badge bg-primary bg-opacity-10 text-primary">2 recheios</span>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Doce de leite
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Creme belga
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                4 leites
+              </li>
+              <li class="text-center mt-3">
+                <small class="text-muted">+5 outras opções</small>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!-- Doces -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://images.vexels.com/media/users/3/134503/isolated/preview/830fdc409b6a46e1685e18a1b2eae1e2-comida-doce-de-cupcake-de-sobremesa.png" width="60" class="mb-3">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Doces</h4>
-          <p class="text-secondary fw-bold">Escolher 2 opções</p>
-          <ul class="list-unstyled">
-            <li>Brigadeiro</li>
-            <li>Beijinho</li>
-            <li>Moranguinho</li>
-          </ul>
-        </div>
-
-        <!-- Bolo -->
-        <div class="col-md-3 col-12 mb-4 border-start border-dark">
-          <img src="https://images.vexels.com/media/users/3/322603/isolated/preview/4fc53faf65190cc0a2c265bff8c07c16-bolo-plano-de-cereja.png" width="60" class="mb-3">
-          <h4 class="fw-bold" style="font-family: 'Comic Sans MS', cursive;">Bolo</h4>
-          <p class="text-secondary fw-bold">Escolher 2 recheios</p>
-          <ul class="list-unstyled">
-            <li>Doce de leite</li>
-            <li>Creme belga</li>
-            <li>4 leites</li>
-            <li>Brigadeiro tradicional</li>
-            <li>Ninho</li>
-            <li>Paçoquinha</li>
-            <li>Mousse de morango/maracujá</li>
-            <li>Charge</li>
-          </ul>
-        </div>
-
       </div>
     </div>
-  </section>
 
+    <!-- Botão para ver cardápio completo -->
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg px-5 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#cardapioCompletoModal" style="background: linear-gradient(135deg, #ff6B9E 0%, #6F5BFF 100%); border: none; border-radius: 50px;">
+        <i class="bi bi-menu-up me-2"></i>Ver Cardápio Completo
+      </button>
+    </div>
+  </div>
+</section>
 
+<!-- Modal do Cardápio Completo -->
+<div class="modal fade" id="cardapioCompletoModal" tabindex="-1" aria-labelledby="cardapioCompletoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title fw-bold" id="cardapioCompletoModalLabel">
+          <i class="bi bi-egg-fried me-2"></i>Cardápio Completo do Buffet
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <!-- Todas as categorias do cardápio aqui (mesmo conteúdo anterior) -->
+          <!-- Entrada -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-egg-fried me-2"></i>Entrada
+                </h5>
+                <small class="text-muted">Escolher 3 opções</small>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Barquinha de maionese
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Batata frita
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mini hambúrguer
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mini cachorro quente
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mini pizza
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mini lanche de pernil
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mini pão sírio (patê de frango)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salgados Fritos -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-fire me-2"></i>Salgados Fritos
+                </h5>
+                <small class="text-muted">Escolher 4 opções</small>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Coxinha
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Kibe
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Bolinha de queijo
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Enroladinho de salsicha
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Enroladinho de presunto e queijo
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Risolis de milho com catupiry
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Continue com as outras categorias... -->
+          <!-- Salgados Assados -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-oven me-2"></i>Salgados Assados
+                </h5>
+                <small class="text-muted">Escolher 2 opções</small>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Esfirra de carne
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Esfirra de frango
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Esfirra de calabresa com catupiry
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Empada de frango
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Tortinha de tempero
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Massas -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-noodles me-2"></i>Massas
+                </h5>
+                <small class="text-muted">Escolher 1 opção</small>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Macarrão parafuso com molho bolonhesa
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Polenta com carne moída
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebidas -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-cup-straw me-2"></i>Bebidas
+                </h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Coca-Cola
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Guaraná Cruzeiro
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Suco de laranja
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Água
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doces -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-cake me-2"></i>Doces
+                </h5>
+                <small class="text-muted">Escolher 2 opções</small>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Brigadeiro
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Beijinho
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Moranguinho
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bolo -->
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light">
+                <h5 class="fw-bold mb-0" style="color: #ff5e99;">
+                  <i class="bi bi-stars me-2"></i>Bolo
+                </h5>
+                <small class="text-muted">Escolher 2 recheios</small>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Doce de leite
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Creme belga
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    4 leites
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Brigadeiro tradicional
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Ninho
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Paçoquinha
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mousse de morango/maracujá
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Charge
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

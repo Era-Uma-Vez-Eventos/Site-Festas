@@ -156,3 +156,55 @@
       background-color: var(--primary);
       color: white;
     }
+
+
+
+  /* cardapio */
+.card-menu {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-menu:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 94, 153, 0.2) !important;
+}
+
+.menu-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff84ae94 0%, #5b9bff9c 100%);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.menu-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Estilo para o modal */
+.modal-content {
+  border-radius: 20px;
+  border: none;
+}
+
+.modal-header {
+  border-radius: 20px 20px 0 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 20px;
+  }
+  
+  .modal-body .card {
+    margin-bottom: 15px;
+  }
+}
