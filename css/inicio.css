@@ -164,7 +164,7 @@
   transition: all 0.3s ease;
   border-radius: 15px;
   overflow: hidden;
-}
+} 
 
 .card-menu:hover {
   transform: translateY(-5px);
