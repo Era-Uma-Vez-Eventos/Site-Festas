@@ -208,3 +208,188 @@
     margin-bottom: 15px;
   }
 }
+
+
+
+
+/*contato*/
+ .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5e99;
+  }
+
+  .pill {
+    background-color: rgba(255, 94, 153, 0.1);
+    color: #ff5e99;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .form-control, .form-select {
+    border-radius: 10px;
+    border: 1px solid #ff5e99;
+  }
+
+  .form-control:focus, .form-select:focus {
+    border-color: #ff5e99;
+    box-shadow: 0 0 5px rgba(255, 94, 153, 0.5);
+  }
+
+  .btn-primary {
+    background-color: #ff5e99;
+    border-color: #ff5e99;
+  }
+
+  .btn-primary:hover {
+    background-color: #e55a8a;
+    border-color: #e55a8a;
+  }
+
+  .btn-success {
+    background-color: #25D366;
+    border-color: #25D366;
+  }
+
+  .btn-success:hover {
+    background-color: #1ebc5a;
+    border-color: #1ebc5a;
+  }
+
+  .shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  
+/* Animações personalizadas */
+  .animate-pop-in {
+    animation: popIn 0.6s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+  
+  .input-animate {
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+  }
+  
+  .input-animate:focus {
+    border-color: #ff5e99;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 94, 153, 0.2);
+  }
+  
+  .btn-animate {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-animate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-animate:active {
+    transform: translateY(-1px);
+  }
+  
+  .btn-social {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-social:hover {
+    transform: scale(1.1);
+    background-color: #ff5e99 !important;
+    border-color: #ff5e99 !important;
+    color: white !important;
+  }
+  
+  .shadow-hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-hover:hover {
+    box-shadow: 0 10px 30px rgba(255, 94, 153, 0.15);
+  }
+  
+  /* Keyframes das animações */
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Efeito de loading no botão de enviar */
+  .btn-loading {
+    position: relative;
+    color: transparent;
+  }
+  
+  .btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

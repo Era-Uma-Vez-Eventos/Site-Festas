@@ -734,81 +734,116 @@
 
 
 
-      <!-- CONTATO -->
-      <section id="contato" class="container py-5">
-        <div class="text-center mb-4">
-          <span class="pill"><i class="bi bi-envelope"></i> Contato</span>
-          <h2 class="mt-2 section-title">Peça um orçamento</h2>
-          <p class="text-muted">Conte pra gente a data, o tipo de evento e o número de convidados.</p>
-        </div>
+    <!-- CONTATO COM ANIMAÇÕES -->
+<section id="contato" class="container py-5" style="background: linear-gradient(135deg, #fff4f8 0%, #f0f8ff 100%);">
+  <div class="text-center mb-4">
+    <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary animate-pop-in">
+      <i class="bi bi-envelope"></i> Contato
+    </span>
+    <h2 class="mt-2 section-title animate-pop-in" style="color: #ff5e99;">Peça um orçamento</h2>
+    <p class="text-muted animate-fade-in">Conte pra gente a data, o tipo de evento e o número de convidados.</p>
+  </div>
 
-        <div class="row g-4">
-          <div class="col-12 col-lg-7">
-            <form id="formContato" class="bg-white p-4 rounded-4 shadow-sm border">
-              <div class="row g-3">
-                <div class="col-12 col-md-6">
-                  <label class="form-label">Nome</label>
-                  <input type="text" class="form-control" name="nome" required />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="form-label">Telefone/WhatsApp</label>
-                  <input type="tel" class="form-control" name="telefone" required />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="form-label">E-mail</label>
-                  <input type="email" class="form-control" name="email" required />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="form-label">Data do Evento</label>
-                  <input type="date" class="form-control" name="data" required />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="form-label">Nº de Convidados</label>
-                  <input type="number" class="form-control" name="convidados" min="10" max="500" />
-                </div>
-                <div class="col-12 col-md-6">
-                  <label class="form-label">Pacote</label>
-                  <select class="form-select" name="pacote">
-                    <option>Segunda, Terça, Quarta, Quinta</option>
-                    <option>Segunda, Terça, Quarta, Quinta + Decoração</option>
-                    <option>Sextas, Sabados, Domingos e Feriados </option>
-                    <option>Sextas, Sabados, Domingos e Feriados + Decoração</option>
-                    <option>Sextas a Domingos e Feriados + Decoração + Buffet</option>
-                    <option>Segunda a Sexta + Decoração + Buffet</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Mensagem</label>
-                  <textarea class="form-control" rows="4" name="mensagem" placeholder="Conte-nos detalhes do seu evento..."></textarea>
-                </div>
-                <div class="col-12 d-grid d-md-flex gap-2">
-                  <button class="btn btn-primary"  type="submit">
-                    <i class="bi bi-send me-1"></i> Enviar
-                  </button>
-                  <a id="btnWhats" target="_blank" class="btn btn-success"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
-                </div>
-              </div>
-            </form>
+  <div class="row g-4">
+    <div class="col-12 col-lg-7">
+      <form id="formContato" class="bg-white p-4 rounded-4 shadow-hover border animate-slide-in-left">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control input-animate" name="nome" required 
+                   placeholder="Seu nome completo" />
           </div>
-          <div class="col-12 col-lg-5">
-            <div class="bg-white p-4 rounded-4 shadow-sm border h-100">
-              <h5 class="fw-bold mb-3"><i class="bi bi-clock-history"></i> Horários de funcionamento</h5>
-              <ul class="list-unstyled small">
-                <li>Seg a Sex: 09:00 – 18:00</li>
-                <li>Sábado: 09:00 – 14:00</li>
-                <li>Eventos: conforme agendamento</li>
-              </ul>
-              <hr>
-              <h5 class="fw-bold mb-3"><i class="bi bi-share"></i> Redes sociais</h5>
-              <div class="d-flex gap-2">
-                <a class="btn btn-outline-dark btn-sm" href="https://www.instagram.com/era_uma_vezeventos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
-                <a class="btn btn-outline-dark btn-sm" href="#"><i class="bi bi-facebook"></i></a>
-                <a class="btn btn-outline-dark btn-sm" href="#"><i class="bi bi-tiktok"></i></a>
-              </div>
-            </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label">Telefone/WhatsApp</label>
+            <input type="tel" class="form-control input-animate" name="telefone" required 
+                   placeholder="(11) 99999-9999" />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label">E-mail</label>
+            <input type="email" class="form-control input-animate" name="email" required 
+                   placeholder="seu@email.com" />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label">Data do Evento</label>
+            <input type="date" class="form-control input-animate" name="data" required />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label">Nº de Convidados</label>
+            <input type="number" class="form-control input-animate" name="convidados" min="10" max="500" 
+                   placeholder="Ex: 50" />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label">Pacote</label>
+            <select class="form-select input-animate" name="pacote">
+              <option>Selecione um pacote</option>
+              <option>Segunda, Terça, Quarta, Quinta</option>
+              <option>Segunda, Terça, Quarta, Quinta + Decoração</option>
+              <option>Sextas, Sábados, Domingos e Feriados</option>
+              <option>Sextas, Sábados, Domingos e Feriados + Decoração</option>
+              <option>Sextas a Domingos e Feriados + Decoração + Buffet</option>
+              <option>Segunda a Sexta + Decoração + Buffet</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Mensagem</label>
+            <textarea class="form-control input-animate" rows="4" name="mensagem" 
+                      placeholder="Conte-nos detalhes do seu evento, tema preferido, etc..."></textarea>
+          </div>
+          <div class="col-12 d-grid d-md-flex gap-2">
+            <button class="btn btn-primary btn-animate" type="submit">
+              <i class="bi bi-send me-1"></i> Enviar Orçamento
+            </button>
+            <a id="btnWhats" target="_blank" class="btn btn-success btn-animate">
+              <i class="bi bi-whatsapp me-1"></i> WhatsApp Direto
+            </a>
           </div>
         </div>
-      </section>
+      </form>
+    </div>
+    
+    <div class="col-12 col-lg-5">
+      <div class="bg-white p-4 rounded-4 shadow-hover border h-100 animate-slide-in-right">
+        <h5 class="fw-bold mb-3"><i class="bi bi-clock-history text-primary"></i> Horários de funcionamento</h5>
+        <ul class="list-unstyled small">
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            Seg a Sex: 09:00 – 18:00
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            Sábado: 09:00 – 14:00
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            Eventos: conforme agendamento
+          </li>
+        </ul>
+        <hr>
+        <h5 class="fw-bold mb-3"><i class="bi bi-share text-primary"></i> Redes sociais</h5>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-primary btn-sm btn-social" href="https://www.instagram.com/era_uma_vezeventos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a class="btn btn-outline-primary btn-sm btn-social" href="#">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a class="btn btn-outline-primary btn-sm btn-social" href="#">
+            <i class="bi bi-tiktok"></i>
+          </a>
+        </div>
+        
+        <!-- Informações de contato adicionais -->
+        <div class="mt-4 p-3 rounded-3" style="background-color: #f8f9fa;">
+          <h6 class="fw-bold mb-2"><i class="bi bi-telephone text-primary"></i> Contato Rápido</h6>
+          <p class="mb-1 small"><i class="bi bi-whatsapp text-success me-1"></i> (19) 99628-1803</p>
+          <p class="mb-0 small"><i class="bi bi-envelope text-primary me-1"></i> tainaalvares104@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <!-- RODAPÉ -->
       <footer class="pt-5 pb-4 mt-3">

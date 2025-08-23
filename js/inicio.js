@@ -1,47 +1,46 @@
- // Atualiza o ano do rodapé
-      document.getElementById('ano').textContent = new Date().getFullYear();
+  // Atualiza o ano do rodapé
+  document.getElementById('ano').textContent = new Date().getFullYear();
 
-      // Abre imagem no modal
-      const imgModal = document.getElementById('imgModal');
-      const modalImg = document.getElementById('modalImg');
-      imgModal.addEventListener('show.bs.modal', (event) => {
-        const trigger = event.relatedTarget;
-        const src = trigger?.getAttribute('data-img');
-        if (src) modalImg.src = src;
-      });
-      imgModal.addEventListener('hidden.bs.modal', () => { modalImg.src = ''; });
+  // Abre imagem no modal
+  const imgModal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  imgModal.addEventListener('show.bs.modal', (event) => {
+    const trigger = event.relatedTarget;
+    const src = trigger?.getAttribute('data-img');
+    if (src) modalImg.src = src;
+  });
+  imgModal.addEventListener('hidden.bs.modal', () => { modalImg.src = ''; });
 
-      // Botões de orçamento nos cards de preço preenchem o campo "Pacote"
-      document.querySelectorAll('[data-plan]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const plano = btn.getAttribute('data-plan');
-          document.querySelector('select[name="pacote"]').value = plano;
-          document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
-        });
-      });
+  // Botões de orçamento nos cards de preço preenchem o campo "Pacote"
+  document.querySelectorAll('[data-plan]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const plano = btn.getAttribute('data-plan');
+      document.querySelector('select[name="pacote"]').value = plano;
+      document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-      // Exemplo de envio do formulário (intercepta e monta link de WhatsApp)
-      const form = document.getElementById('formContato');
-      const btnWhats = document.getElementById('btnWhats');
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const data = Object.fromEntries(new FormData(form));
-        const msg = `Olá, gostaria de orçamento para o *${data.pacote}* no dia ${data.data}.\n` +
-                    `Nome: ${data.nome}\nTelefone: ${data.telefone}\n` +
-                    `Convidados: ${data.convidados || '—'}\n` +
-                    `Detalhes: ${data.mensagem || '—'}`;
-        const phone = '5519996281803'; // <— coloque o DDI+DDD+número do salão
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-        window.open(url, '_blank');
-      });
+  // Exemplo de envio do formulário (intercepta e monta link de WhatsApp)
+  const form = document.getElementById('formContato');
+  const btnWhats = document.getElementById('btnWhats');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    const msg = `Olá, gostaria de orçamento para o *${data.pacote}* no dia ${data.data}.\n` +
+                `Nome: ${data.nome}\nTelefone: ${data.telefone}\n` +
+                `Convidados: ${data.convidados || '—'}\n` +
+                `Detalhes: ${data.mensagem || '—'}`;
+    const phone = '5519996281803'; // <— coloque o DDI+DDD+número do salão
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  });
 
-      // Botão WhatsApp isolado (sem submeter)
-      btnWhats.addEventListener('click', (e) => {
-        e.preventDefault();
-        const phone = '5519996281803'; // <— troque pelo número real
-        window.open(`https://wa.me/${phone}`, '_blank');
-      });
-
+  // Botão WhatsApp isolado (sem submeter)
+  btnWhats.addEventListener('click', (e) => {
+    e.preventDefault();
+    const phone = '5519996281803'; // <— troque pelo número real
+    window.open(`https://wa.me/${phone}`, '_blank');
+  });
 
     
     // Animação ao scroll
@@ -71,3 +70,85 @@
     });
   });
 });
+
+ // Adiciona efeitos de interatividade
+  document.addEventListener('DOMContentLoaded', function() {
+    // Efeito de foco nos inputs
+    const inputs = document.querySelectorAll('.input-animate');
+    inputs.forEach(input => {
+      input.addEventListener('focus', () => {
+        input.parentElement.classList.add('input-focused');
+      });
+      input.addEventListener('blur', () => {
+        input.parentElement.classList.remove('input-focused');
+      });
+    });
+    
+    // Animação de loading no envio do formulário
+    const form = document.getElementById('formContato');
+    form.addEventListener('submit', function(e) {
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.classList.add('btn-loading');
+      submitBtn.disabled = true;
+      
+      // Simula um delay para demonstração
+      setTimeout(() => {
+        submitBtn.classList.remove('btn-loading');
+        submitBtn.disabled = false;
+        
+        // Aqui você manteria sua lógica original do WhatsApp
+        const data = Object.fromEntries(new FormData(form));
+        const msg = `Olá, gostaria de orçamento para o *${data.pacote}* no dia ${data.data}.\n` +
+                    `Nome: ${data.nome}\nTelefone: ${data.telefone}\n` +
+                    `Convidados: ${data.convidados || '—'}\n` +
+                    `Detalhes: ${data.mensagem || '—'}`;
+        const phone = '5519996281803';
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
+      }, 1500);
+      
+      e.preventDefault();
+    });
+    
+    // Efeito de digitação no placeholder do textarea
+    const textarea = document.querySelector('textarea[name="mensagem"]');
+    const phrases = [
+      "Conte-nos sobre o tema da festa...",
+      "Alguma decoração especial?",
+      "Preferências de comida?",
+      "Quantas crianças espera?",
+      "Alguma necessidade especial?"
+    ];
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    
+    function typeEffect() {
+      const current = phrases[currentPhrase];
+      
+      if (isDeleting) {
+        textarea.placeholder = current.substring(0, currentChar - 1);
+        currentChar--;
+        typingSpeed = 50;
+      } else {
+        textarea.placeholder = current.substring(0, currentChar + 1);
+        currentChar++;
+        typingSpeed = 100;
+      }
+      
+      if (!isDeleting && currentChar === current.length) {
+        isDeleting = true;
+        typingSpeed = 1000;
+      } else if (isDeleting && currentChar === 0) {
+        isDeleting = false;
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        typingSpeed = 500;
+      }
+      
+      setTimeout(typeEffect, typingSpeed);
+    }
+    
+    // Inicia o efeito de digitação
+    typeEffect();
+  });
