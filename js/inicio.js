@@ -151,4 +151,4 @@
     
     // Inicia o efeito de digitação
     typeEffect();
-  });
+  }); 
