@@ -152,3 +152,24 @@
     // Inicia o efeito de digitação
     typeEffect();
   }); 
+
+  const texts = [
+  "Criamos experiências encantadas que ficarão para sempre na memória do seu filho!",
+  "Momentos de alegria e diversão que seu filho nunca vai esquecer!",
+  "Festas personalizadas que refletem a personalidade do seu pequeno!",
+  "Magia e encanto em cada detalhe da sua celebração!"
+];
+let index = 0;
+const textElement = document.getElementById("animated-text");
+setInterval(() => {
+  // Start fade out
+  textElement.style.animation = 'fadeOut 0.5s forwards';
+  setTimeout(() => {
+    // Update text content after fading out
+    index = (index + 1) % texts.length;
+    textElement.textContent = texts[index];
+    
+    // Start fade in
+    textElement.style.animation = 'fadeIn 0.5s forwards';
+  }, 500); // Wait for fade out to complete before changing text
+}, 5000); // Change every 5 seconds

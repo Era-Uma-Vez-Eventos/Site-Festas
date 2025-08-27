@@ -5,6 +5,7 @@
       --light-bg: #FFF4F8;
       --dark-text: #2A2A2A;
     }
+   
     
     body {
       font-family: 'Poppins', sans-serif;
@@ -393,3 +394,63 @@
       transform: rotate(360deg);
     }
   }
+  .fw-bold{
+      font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff5e99; 
+  text-shadow: 2px 2px 5px #ffffff;
+  letter-spacing: 3px;
+    
+
+}
+.fw-boldd {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #00000046; 
+  text-shadow: 2px 2px 5px #4ca8ff;
+  letter-spacing: 5px;
+}
+
+    .text-highlight {
+        color: #ff5e99;
+        font-size: 1.5rem; /* Adjust font size as needed */
+        text-shadow: 0 0 5px rgba(255, 94, 153, 0.8), 0 0 20px rgba(0, 153, 255, 0.8); /* Pink and blue glow effect */
+    }
+
+    .borda{ 
+      border-left: 15px solid rgba(255, 90, 200, 0.349);
+      border-top: 15px solid rgba(255, 90, 200, 0.37);
+      border-radius: 18px;
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.432);
+      transform: rotate(350deg);
+    }
+
+    @keyframes textChange {
+  0% { content: "Criamos experiências encantadas que ficarão para sempre na memória do seu filho!"; }
+  25% { content: "Momentos de alegria e diversão que seu filho nunca vai esquecer!"; }
+  50% { content: "Festas personalizadas que refletem a personalidade do seu pequeno!"; }
+  75% { content: "Magia e encanto em cada detalhe da sua celebração!"; }
+  100% { content: "Criamos experiências encantadas que ficarão para sempre na memória do seu filho!"; }
+}
+
+#animated-text {
+    animation: textChange 10s infinite;
+    overflow: hidden;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+#animated-text {
+    animation: fadeIn 0.5s forwards; /* Fading in */
+    overflow: hidden;
+    opacity: 1; /* Start visible */
+}
